@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Table</title>
+        <style>
+            .mytable{
+                border-collapse: collapse;
+                width: 500px;
+            }
+
+            .mytable td, .mytable th{
+                border: 1px solid black;
+                padding: 8px;
+            }
+
+            .mytable tr:nth-child(odd){
+                background-color: lightblue;
+            }
+
+            .mytable tr:hover{
+                background-color: lightgreen;
+            }
+
+            .flex{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .flex1{
+                padding-left: 40%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table class="mytable">
+            <tr>
+                <th>First Name</th>
+                <th class="flex">
+                    <div class="flex1">Last</div>
+                    <div>Name</div>
+                </th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+            </tr>
+        </table>
+    </body>
+</html>
