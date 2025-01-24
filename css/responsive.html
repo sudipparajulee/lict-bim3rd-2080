@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive</title>
+        <style>
+            .services{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 20px;
+                padding: 20px 100px;
+            }
+            .service{
+                background-color: rgb(174, 175, 175);
+                padding: 20px;
+                border-radius: 10px;
+            }
+            @media screen and (max-width: 1024px){
+                .services{
+                    grid-template-columns: 1fr 1fr;
+                    padding: 20px 50px;
+                }
+            }
+
+            @media screen and (max-width: 768px){
+                .services{
+                    grid-template-columns: 1fr;
+                    padding: 20px 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="services">
+            <div class="service">
+                <h1>Service 1</h1>
+                <img src="https://nepalserofero.com/img/news/image_6487327%20(3)_1717847969.JPG" alt="" style="width: 100%;">
+                <p class="mypara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+            </div>
+            <div class="service">
+                <h1>Service 2</h1>
+                <img src="https://nepalserofero.com/img/news/image_6487327%20(3)_1717847969.JPG" alt="" style="width: 100%;">
+                <p class="mypara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+            </div>
+            <div class="service">
+                <h1>Service 3</h1>
+                <img src="https://nepalserofero.com/img/news/image_6487327%20(3)_1717847969.JPG" alt="" style="width: 100%;">
+                <p class="mypara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+            </div>
+        </div>
+    </body>
+</html>
