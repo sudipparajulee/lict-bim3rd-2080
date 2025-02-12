@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Clock</title>
+    </head>
+    <body>
+        <h2>The time is</h2>
+        <h3 id="clock"></h3>
+        <script>
+            function calculateTime()
+            {
+                let today = new Date();
+                let h = today.getHours();
+                let m = today.getMinutes();
+                let s = today.getSeconds();
+                let currentTime = check(h) + ":" + check(m) + ":" + check(s);
+                document.getElementById("clock").innerHTML = currentTime;
+            }
+            calculateTime();
+            setInterval(calculateTime, 1000);
+
+            function check(x)
+            {
+                if(x < 10)
+                {
+                    x = "0" + x;
+                }
+                return x;
+            }
+        </script>
+    </body>
+</html>
