@@ -15,6 +15,7 @@
                 text-align: center;
                 padding: 10px;
                 border-radius: 10px;
+                transition: 0.3s;
             }
         </style>
     </head>
@@ -22,5 +23,21 @@
         <div class="progress-bar">
             <div id="progress">70%</div>
         </div>
+
+        <script>
+            let count = 5;
+            document.getElementById('progress').style.width = count + '%';
+            function counter()
+            {
+                document.getElementById('progress').innerHTML = count + '%';
+                document.getElementById('progress').style.width = count + '%';
+                count++;
+                if(count > 70)
+                {
+                    clearInterval(x);
+                }
+            }
+            let x = setInterval(counter,50);
+        </script>
     </body>
 </html>
