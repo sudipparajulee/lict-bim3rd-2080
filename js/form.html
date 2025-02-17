@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+    </head>
+    <body>
+        <form action="" onsubmit="return validate()">
+            <input type="text" id="name" placeholder="Enter Name"> <br> <br>
+            <input type="text" id="email" placeholder="Enter Email"> <br> <br>
+            <input type="text" id="phone" placeholder="Enter Phone Number"> <br> <br>
+            <input type="password" id="password" placeholder="Enter Password"> <br> <br>
+            <input type="password" id="confirm_password" placeholder="Confirm Password"> <br> <br>
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+            function validate()
+            {
+                let name = document.getElementById('name').value;
+                let email = document.getElementById('email').value;
+                let phone = document.getElementById('phone').value;
+                let password = document.getElementById('password').value;
+                let cpassword = document.getElementById('confirm_password').value;
+
+                //all fields must be filled
+                if(name == '' || email == '' || phone == '' || password == '' || cpassword == '')
+                {
+                    alert('Please fill all fields');
+                    return false;
+                }
+
+                //check if password and confirm_password are equal
+                if(password != cpassword)
+                {
+                    alert('Password didnot match');
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
